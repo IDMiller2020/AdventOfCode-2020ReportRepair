@@ -198,6 +198,7 @@ const inputArr = [261,
   1496,
   1455,
   1488]
+// Find the two numbers in the array that add up to 2020 and multiply them together.
 function fix(inputArr) {
   for (let i = 0; i < inputArr.length; i++) {
     const element = inputArr[i];
@@ -211,3 +212,25 @@ function fix(inputArr) {
 }
 
 fix(inputArr)
+
+// Find the three numbers in the array that sum to 2020 and find the product.
+function threeNum(inputArr) {
+  for (let i = 0; i < inputArr.length; i++) {
+    const element1 = inputArr[i];
+    for (let j = i + 1; j < inputArr.length; j++) {
+      const element2 = inputArr[j];
+      if (element1 + element2 < 2020) {
+        for (let k = j + 1; k < inputArr.length; k++) {
+          const element3 = inputArr[k];
+          if (element1 + element2 + element3 === 2020) {
+            console.log(element1 * element2 * element3)
+          }
+          
+        }
+      }
+      
+    }
+  }
+}
+
+threeNum(inputArr)
